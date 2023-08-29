@@ -1,0 +1,28 @@
+{
+  "name": "playwright-poc",
+  "version": "1.0.0",
+  "description": "This framework leverages Playwright, a Node.js library for automating web browsers, to create end-to-end tests for web applications. It utilizes the power of TypeScript to provide type safety, better code organization, and enhanced readability.",
+  "scripts": {
+    "test:login": "npx playwright test tests/login --grep @suite:login",
+    "test:inventory": "npx playwright test tests/inventory --grep @suite:inventory",
+    "test:visual": "npx playwright test tests/visual --grep @suite:visual",
+    "test:smoke": "npx playwright test tests/smoke --grep @suite:smoke",
+    "test:regression": "npx playwright test tests/ --grep @suite:regression",
+    "test:build": "tsc --incremental -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "Oleh Sikorskyi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OlehSikorskyi/playwright-poc"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.37.0",
+    "config": "^3.3.9",
+    "dotenv": "^16.0.3",
+    "form-data": "4.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
