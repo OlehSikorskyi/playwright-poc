@@ -1,7 +1,7 @@
 import {expect, Page} from "@playwright/test";
 import {Scenario} from "../Scenario";
 
-export class Check {
+export class BaseCheck {
     protected page: Page;
 
     constructor(page: Page) {

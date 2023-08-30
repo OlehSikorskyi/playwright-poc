@@ -1,4 +1,4 @@
-import {Step} from "./Step";
+import {BaseStep} from "./BaseStep";
 import {LoginPage} from "../ui/pages/LoginPage";
 import {Users} from "../../configuration/Users";
 import {Scenario} from "../Scenario";
@@ -7,7 +7,7 @@ import {InventoryPage} from "../ui/pages/InventoryPage";
 import {InventoryItem} from "../ui/fragments/InventoryItem";
 import {expect} from "@playwright/test";
 
-export class InventorySteps extends Step {
+export class InventorySteps extends BaseStep {
     public inventoryPage: InventoryPage;
 
     constructor(inventoryPage: InventoryPage) {

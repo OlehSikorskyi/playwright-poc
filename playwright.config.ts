@@ -5,7 +5,7 @@ export default defineConfig({
     testDir: './tests',
     fullyParallel: true,
     workers: process.env.CI ? 1 : undefined,
-    reporter: [['html', {open: 'on-failure'}]],
+    reporter: [['html', {open: 'always'}]],
     use: {
         trace: 'on-first-retry',
         headless: true
@@ -15,9 +15,9 @@ export default defineConfig({
             name: 'chromium',
             use: {...devices['Desktop Chrome']},
         },
-        {
-            name: 'firefox',
-            use: {...devices['Desktop Firefox']},
-        }
+        // {
+        //     name: 'firefox',
+        //     use: {...devices['Desktop Firefox']},
+        // }
     ],
 });
