@@ -1,9 +1,9 @@
-import {Check} from "./Check";
+import {BaseCheck} from "./BaseCheck";
 import {expect, Page} from "@playwright/test";
 import {Scenario} from "../Scenario";
 import {CartPage} from "../ui/pages/CartPage";
 
-export class CartChecks extends Check {
+export class CartChecks extends BaseCheck {
     protected cartPage: CartPage;
 
     constructor(page: Page, cartPage: CartPage) {

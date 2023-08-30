@@ -3,6 +3,7 @@ import {Input} from "../elements/Input";
 import {ElementBuilder} from "../ElementBuilder";
 import {FragmentSelector} from "../Selectors";
 import {BaseFragment} from "./BaseFragment";
+import {Step} from "../../../../helpers/Step";
 
 export class Form extends BaseFragment {
     private usernameElement;
@@ -23,6 +24,7 @@ export class Form extends BaseFragment {
         return FragmentSelector.Form;
     }
 
+    @Step("Login to the application")
     async login(userName: string, password: string) {
         await this.usernameElement.fill(userName);
         await this.passwordElement.fill(password);

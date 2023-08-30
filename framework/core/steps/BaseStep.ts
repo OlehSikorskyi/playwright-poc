@@ -1,7 +1,7 @@
 import {BasePage} from "../ui/pages/BasePage";
 import {Scenario} from "../Scenario";
 
-export class Step {
+export class BaseStep {
     public page: BasePage;
 
     constructor(page: BasePage) {
