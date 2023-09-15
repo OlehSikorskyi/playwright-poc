@@ -1,9 +1,9 @@
-import {BaseCheck} from "./BaseCheck";
-import {Scenario} from "../Scenario";
+import {BaseUiCheck} from "./BaseUiCheck";
+import {Scenario} from "../../Scenario";
 import {expect, Page} from "@playwright/test";
-import {LoginPage} from "../ui/pages/LoginPage";
+import {LoginPage} from "../../ui/pages/LoginPage";
 
-export class LoginChecks extends BaseCheck {
+export class LoginChecks extends BaseUiCheck {
     protected loginPage: LoginPage;
 
     constructor(page: Page, loginPage: LoginPage) {

@@ -4,6 +4,7 @@ import {ScenarioAttributes} from "./ScenarioAttributes";
 import {LoginPage} from "./ui/pages/LoginPage";
 import {InventoryPage} from "./ui/pages/InventoryPage";
 import {CartPage} from "./ui/pages/CartPage";
+import {GoRestService} from "./api/services/goRest/GoRestService";
 
 export const Scenario = test.extend<Fixtures>({
     TestCase: async ({}, use, testInfo) => {
@@ -30,5 +31,9 @@ export const Scenario = test.extend<Fixtures>({
 
     cartPage: async ({page}, use) => {
         await use(new CartPage(page));
+    },
+
+    goRestService: async ({request}, use) => {
+        await use(new GoRestService(request));
     },
 })

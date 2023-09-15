@@ -1,9 +1,9 @@
-import {Suite} from "../../framework/configuration/Suites";
-import {Scenario} from "../../framework/core/Scenario";
-import {LoginSteps} from "../../framework/core/steps/LoginSteps";
-import {Users} from "../../framework/configuration/Users";
-import {LoginChecks} from "../../framework/core/checks/LoginChecks";
-import {ConfigurationHandler} from "../../framework/configuration/ConfigurationHandler";
+import {Suite} from "../../../framework/configuration/Suites";
+import {Scenario} from "../../../framework/core/Scenario";
+import {LoginSteps} from "../../../framework/core/steps/ui/LoginSteps";
+import {Users} from "../../../framework/configuration/Users";
+import {LoginChecks} from "../../../framework/core/checks/ui/LoginChecks";
+import {ConfigurationHandler} from "../../../framework/configuration/ConfigurationHandler";
 
 let loginSteps: LoginSteps;
 let loginChecks: LoginChecks;
@@ -14,7 +14,7 @@ Scenario.describe('Login page suite.', () => {
         loginChecks = new LoginChecks(page, loginPage);
     });
 
-    Scenario.only(`Test that standard user can login. ${Suite.Login} ${Suite.Regression}`, async ({TestCase, loginPage}) => {
+    Scenario(`Test that standard user can login. ${Suite.Login} ${Suite.Regression}`, async ({TestCase, loginPage}) => {
         TestCase('ID-3257');
         await loginSteps.launch();
         // await loginSteps.login(Users.Standard);

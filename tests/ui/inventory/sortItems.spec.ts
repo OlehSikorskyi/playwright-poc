@@ -1,11 +1,10 @@
-import {Suite} from "../../framework/configuration/Suites";
-import {Scenario} from "../../framework/core/Scenario";
-import {LoginSteps} from "../../framework/core/steps/LoginSteps";
-import {Users} from "../../framework/configuration/Users";
-import {LoginChecks} from "../../framework/core/checks/LoginChecks";
-import {InventorySteps} from "../../framework/core/steps/InventorySteps";
-import {CartChecks} from "../../framework/core/checks/CartChecks";
-import {InventoryChecks} from "../../framework/core/checks/InventoryChecks";
+import {Suite} from "../../../framework/configuration/Suites";
+import {Scenario} from "../../../framework/core/Scenario";
+import {LoginSteps} from "../../../framework/core/steps/ui/LoginSteps";
+import {Users} from "../../../framework/configuration/Users";
+import {InventorySteps} from "../../../framework/core/steps/ui/InventorySteps";
+import {InventoryChecks} from "../../../framework/core/checks/ui/InventoryChecks";
+import {ConfigurationHandler} from "../../../framework/configuration/ConfigurationHandler";
 
 let loginSteps: LoginSteps;
 let inventoryStep: InventorySteps;
@@ -18,7 +17,9 @@ Scenario.describe('Inventory page suite. Add to cart.', () => {
         inventoryChecks = new InventoryChecks(page, inventoryPage);
 
         await loginSteps.launch();
-        await loginSteps.login(Users.Standard);
+        const user = new ConfigurationHandler().getUser(Users.Standard);
+        await loginPage.loginForm().login(user.email, user.password);
+        // await loginSteps.login(Users.Standard);
     });
 
     Scenario(`Test that Sorting option Name (A to Z) is set by default. ${Suite.Inventory} ${Suite.Regression}`, async ({TestCase}) => {

@@ -1,7 +1,7 @@
-import {LoginPage} from "../ui/pages/LoginPage";
-import {BaseStep} from "./BaseStep";
+import {LoginPage} from "../../ui/pages/LoginPage";
+import {BaseUiStep} from "./BaseUiStep";
 
-export class LoginSteps extends BaseStep {
+export class LoginSteps extends BaseUiStep {
 
     public loginPage: LoginPage;
 

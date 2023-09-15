@@ -6,5 +6,8 @@ export default {
     lockedOutUser: {
         email: 'LOCKED_OUT_USER_NAME',
         password: 'LOCKED_OUT_USER_PASSWORD'
+    },
+    gitHubUser: {
+        token: `GITHUB_USER_TOKEN`
     }
 }
