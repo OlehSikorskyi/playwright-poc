@@ -1,3 +1,3 @@
 export enum Services {
-    Auth = 'auth',
+    GoRest = 'goRest',
 }

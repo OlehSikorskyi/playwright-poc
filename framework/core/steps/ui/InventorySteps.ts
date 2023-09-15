@@ -1,13 +1,13 @@
-import {BaseStep} from "./BaseStep";
-import {LoginPage} from "../ui/pages/LoginPage";
-import {Users} from "../../configuration/Users";
-import {Scenario} from "../Scenario";
-import {ConfigurationHandler} from "../../configuration/ConfigurationHandler";
-import {InventoryPage} from "../ui/pages/InventoryPage";
-import {InventoryItem} from "../ui/fragments/InventoryItem";
+import {BaseUiStep} from "./BaseUiStep";
+import {LoginPage} from "../../ui/pages/LoginPage";
+import {Users} from "../../../configuration/Users";
+import {Scenario} from "../../Scenario";
+import {ConfigurationHandler} from "../../../configuration/ConfigurationHandler";
+import {InventoryPage} from "../../ui/pages/InventoryPage";
+import {InventoryItem} from "../../ui/fragments/InventoryItem";
 import {expect} from "@playwright/test";
 
-export class InventorySteps extends BaseStep {
+export class InventorySteps extends BaseUiStep {
     public inventoryPage: InventoryPage;
 
     constructor(inventoryPage: InventoryPage) {

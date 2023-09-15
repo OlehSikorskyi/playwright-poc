@@ -1,6 +1,7 @@
 export enum Suites {
     Login = 'login',
     Inventory = 'inventory',
+    GoRestService = 'goRestService',
     Visual = 'visual',
     Regression = 'regression',
     Smoke = 'smoke'

@@ -2,8 +2,9 @@ export default {
     baseUrl: `https://www.saucedemo.com/`,
     services: [
         {
-            name: `auth`,
-            url: ''
+            name: `goRest`,
+            url: 'https://gorest.co.in/public/',
+            version: 'v2'
         }
     ],
     standardUser: {
@@ -15,5 +16,11 @@ export default {
         type: 'locked_out_user',
         email: ``,
         password: ``
+    },
+    gitHubUser: {
+        type: 'github_user',
+        email: ``,
+        password: ``,
+        token: ``
     }
 }

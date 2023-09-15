@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "This framework leverages Playwright, a Node.js library for automating web browsers, to create end-to-end tests for web applications. It utilizes the power of TypeScript to provide type safety, better code organization, and enhanced readability.",
   "scripts": {
-    "test:login": "npx playwright test tests/login --grep @suite:login",
-    "test:inventory": "npx playwright test tests/inventory --grep @suite:inventory",
+    "test:login": "npx playwright test tests/ui/login --grep @suite:login",
+    "test:inventory": "npx playwright test tests/ui/inventory --grep @suite:inventory",
+    "test:goRestService": "npx playwright test tests/api/goRestService --grep @suite:goRestService",
     "test:visual": "npx playwright test tests/visual --grep @suite:visual",
     "test:smoke": "npx playwright test tests/smoke --grep @suite:smoke",
     "test:regression": "npx playwright test tests/ --grep @suite:regression",
