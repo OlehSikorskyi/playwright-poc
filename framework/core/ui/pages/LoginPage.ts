@@ -1,6 +1,6 @@
 import {BasePage} from "./BasePage";
 import {Page} from "@playwright/test";
-import {ElementBuilder} from "../ElementBuilder";
+import {ElementBuilder} from "../builder/ElementBuilder";
 import {Form} from "../fragments/Form";
 
 export class LoginPage extends BasePage {

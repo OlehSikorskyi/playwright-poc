@@ -1,7 +1,5 @@
 import {ConfigurationHandler} from "../../../../configuration/ConfigurationHandler";
 import {GoRestServiceImplementation} from "./GoRestServiceImplementation";
-import {APIRequest} from "@playwright/test";
-import {RequestOptions} from "../../RequestOptions";
 import {Services} from "../../../../configuration/Services";
 import {APIRequestContext} from "playwright-core";
 import {Service} from "../../../../configuration/types/Service";

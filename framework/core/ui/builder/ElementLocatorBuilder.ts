@@ -1,7 +1,7 @@
 import {FrameLocatorBuilder} from "./FrameLocatorBuilder";
-import {BaseElement} from "./elements/BaseElement";
+import {BaseElement} from "../elements/BaseElement";
 import {Locator} from "@playwright/test";
-import {SelectorType} from "./Selectors";
+import {SelectorType} from "../Selectors";
 
 export abstract class ElementLocatorBuilder<T extends BaseElement> extends FrameLocatorBuilder<T> {
 

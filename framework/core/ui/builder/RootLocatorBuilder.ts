@@ -1,5 +1,5 @@
 import {BaseBuilder} from "./BaseBuilder";
-import {BaseElement} from "./elements/BaseElement";
+import {BaseElement} from "../elements/BaseElement";
 
 export abstract class RootLocatorBuilder<T extends BaseElement> extends BaseBuilder<T> {
 

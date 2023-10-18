@@ -7,6 +7,8 @@ export type Fixtures = {
     TestCase: (id: string) => void;
     Defects: (id: string) => void;
 
+    screenshotOnFailure: void;
+
     loginPage: LoginPage;
     inventoryPage: InventoryPage;
     cartPage: CartPage;

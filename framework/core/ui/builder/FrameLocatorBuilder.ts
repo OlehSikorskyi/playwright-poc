@@ -1,5 +1,5 @@
 import {RootLocatorBuilder} from "./RootLocatorBuilder";
-import {BaseElement} from "./elements/BaseElement";
+import {BaseElement} from "../elements/BaseElement";
 import {Locator} from "@playwright/test";
 
 export abstract class FrameLocatorBuilder<T extends BaseElement> extends RootLocatorBuilder<T> {

@@ -1,16 +1,16 @@
 import {Locator, Page} from "@playwright/test";
 import {Image} from "../elements/Image";
 import {Button} from "../elements/Button";
-import {ElementBuilder} from "../ElementBuilder";
+import {ElementBuilder} from "../builder/ElementBuilder";
 import {FragmentSelector} from "../Selectors";
 import {BaseFragment} from "./BaseFragment";
 
 export class InventoryItem extends BaseFragment {
-    private imageElement;
+    private imageElement: Image;
     private title: Locator;
     private description: Locator;
     private price: Locator;
-    private addToCartButtonElement;
+    private addToCartButtonElement: Button;
 
 
     constructor(page: Page, rootSelector: Locator) {

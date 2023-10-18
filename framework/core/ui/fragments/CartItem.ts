@@ -1,9 +1,9 @@
 import {BaseFragment} from "./BaseFragment";
 import {Locator, Page} from "@playwright/test";
 import {Button} from "../elements/Button";
-import {ElementBuilder} from "../ElementBuilder";
+import {ElementBuilder} from "../builder/ElementBuilder";
 import {FragmentSelector} from "../Selectors";
-import {Filter} from "../Filter";
+import {Filter} from "../builder/Filter";
 import {Image} from "../elements/Image";
 
 export class CartItem extends BaseFragment {

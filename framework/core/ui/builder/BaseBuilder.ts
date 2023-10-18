@@ -1,4 +1,4 @@
-import {BaseElement} from "./elements/BaseElement";
+import {BaseElement} from "../elements/BaseElement";
 import {Locator, Page} from "@playwright/test";
 import {FilteringConfig} from "./FilteringConfig";
 
