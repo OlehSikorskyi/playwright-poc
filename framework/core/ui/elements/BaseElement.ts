@@ -1,5 +1,5 @@
 import {Locator, Page} from "@playwright/test";
-import {FilteringConfig} from "../FilteringConfig";
+import {FilteringConfig} from "../builder/FilteringConfig";
 import {SelectorType} from "../Selectors";
 
 export abstract class BaseElement {

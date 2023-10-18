@@ -5,10 +5,11 @@ export default defineConfig({
     testDir: './tests',
     fullyParallel: true,
     workers: process.env.CI ? 1 : undefined,
-    reporter: [['html', {open: 'always'}]],
+    reporter: [
+        process.env.CI ? ['./helpers/reporter/CustomReporter.ts'] : ['html', { open: 'always'}]],
     use: {
         trace: 'on-first-retry',
-        headless: true
+        headless: false
     },
     projects: [
         {

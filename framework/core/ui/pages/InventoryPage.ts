@@ -1,8 +1,8 @@
 import {BasePage} from "./BasePage";
 import {Page} from "@playwright/test";
 import {InventoryItem} from "../fragments/InventoryItem";
-import {ElementBuilder} from "../ElementBuilder";
-import {Filter} from "../Filter";
+import {ElementBuilder} from "../builder/ElementBuilder";
+import {Filter} from "../builder/Filter";
 import {Header} from "../fragments/Header";
 import {Select} from "../elements/Select";
 

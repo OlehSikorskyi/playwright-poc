@@ -1,3 +1,6 @@
+import { ConfigurationHandler } from "../../../configuration/ConfigurationHandler";
+import { Users } from "../../../configuration/Users";
+import { Scenario } from "../../Scenario";
 import {LoginPage} from "../../ui/pages/LoginPage";
 import {BaseUiStep} from "./BaseUiStep";
 
@@ -10,10 +13,10 @@ export class LoginSteps extends BaseUiStep {
         this.loginPage = loginPage;
     }
 
-    // async login(type: Users) {
-    //     await Scenario.step(`Login to the application`, async () => {
-    //         const user = new ConfigurationHandler().getUser(type);
-    //         await this.loginPage.loginForm().login(user.email, user.password);
-    //     });
-    // }
+    async login(type: Users) {
+        await Scenario.step(`Login to the application`, async () => {
+            const user = new ConfigurationHandler().getUser(type);
+            await this.loginPage.loginForm().login(user.email, user.password);
+        });
+    }
 }

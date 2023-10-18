@@ -1,5 +1,5 @@
 import {ElementLocatorBuilder} from "./ElementLocatorBuilder";
-import {BaseElement} from "./elements/BaseElement";
+import {BaseElement} from "../elements/BaseElement";
 import {Locator} from "@playwright/test";
 
 export abstract class FilteredLocatorBuilder<T extends BaseElement> extends ElementLocatorBuilder<T> {

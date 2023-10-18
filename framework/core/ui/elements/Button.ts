@@ -11,4 +11,8 @@ export class Button extends BaseElement {
     getElementSelector(): ElementSelector {
         return ElementSelector.Button;
     }
+    
+    async click() {
+        await this.elementLocator.click();
+    }
 }

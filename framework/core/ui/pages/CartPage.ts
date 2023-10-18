@@ -1,7 +1,7 @@
 import {BasePage} from "./BasePage";
 import {Page} from "@playwright/test";
-import {Filter} from "../Filter";
-import {ElementBuilder} from "../ElementBuilder";
+import {Filter} from "../builder/Filter";
+import {ElementBuilder} from "../builder/ElementBuilder";
 import {CartItem} from "../fragments/CartItem";
 
 export class CartPage extends BasePage {
